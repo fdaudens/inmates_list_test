@@ -156,6 +156,12 @@ for inmate in inmates:
 
 print inmate_races
 
+scraperwiki.sqlite.save(
+    unique_keys=['absolute_link_to_inmate_details'],
+    data={"age": age, "race":race, "sex":sex, "name":name, "booked_at":booked_at, "city":city}
+)
+
+
 #
 # # Read in a page
 # html = scraperwiki.scrape("http://foo.com")
